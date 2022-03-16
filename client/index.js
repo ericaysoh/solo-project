@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import "./styles.css";
 
 ReactDOM.render(
-    <h1>Hello Squirrels!</h1>,
+    <App />,
+    // document.body.style.background = "pink",
     document.getElementById('root')
-)
+);

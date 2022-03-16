@@ -1,0 +1,60 @@
+body {
+  background-color: skyblue,
+}
+
+#banner {
+  display: flex,
+
+}
+
+.button1 {
+  color: grey
+}
+
+.button2 {
+  color: grey
+}
+
+.button3 {
+  color: grey
+}
+
+.body {
+  display: flex;
+  
+}
+
+.leftside {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 80%;
+}
+
+.rightside {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  row-gap: 10px;
+}
+
+#label {
+  color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#updropdown {
+  color: pink;
+  margin-bottom: 10%;
+}
+  
+#lodropdown {
+  color: red;
+  margin-bottom: 10%;
+}
+  
+#fulldropdown {
+  color: gray;
+  margin-bottom: 10%;
+}
