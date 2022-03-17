@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 // import { Switch, Route } from 'react-router-dom';
+import Dropdown from './Dropdown'
 
 class App extends Component {
   constructor(props){
-      super(props);
+    super(props);
+    // where state goes!! this.state = { // user's progress (dance moves mastered)}
+    this.state = {
+      username: '',
+      userprogress : '',
+    };
+    // bind functions
+    
+    // componentdidmount -> fetch request
   }
   render(){
     return (
         <div>
           <h1>Dancing Squirrels!</h1>
           <div id="banner">
-          <header>Welcome!</header>
-            <div>Login</div>
-            <form className="username">
+            <header>Welcome!</header>
+            <form className="loginInfo">
               <input type="text" className="formtext" placeholder="Username"></input>
             </form>
             {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
-            <form className="username">
+            <form className="loginInfo">
               <input type="text" className="formtext" placeholder="Password"></input>
             </form>
+            <button className="button3" onClick={() => console.log("clocked!")}>Login</button>
             <div>New squirrel?</div>
             <button className="button3" onClick={() => console.log("clocked!")}>Sign Up</button>
           </div>
@@ -26,8 +35,13 @@ class App extends Component {
             <div className="leftside">
           
             </div>
-
-            <div className="rightside">
+            <Dropdown />
+            </div>
+            <div className="progress">
+              hiiii
+            </div>
+            
+            {/* <div className="rightside">
                 <label id="label">Upper Body Moves</label>
                 <select id="updropdown" onClick={() => console.log("upclicked!")}>
                   <option value="chooseupbo">Choose one</option>
@@ -46,8 +60,7 @@ class App extends Component {
                   <option value="full body wave">Body roll</option>
                   <option value="running man">Running man</option>
                 </select>
-            </div>
-          </div>
+            </div> */}
         </div>
     )
   }

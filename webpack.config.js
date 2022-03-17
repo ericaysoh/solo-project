@@ -31,4 +31,9 @@ module.exports = {
         template: path.join(__dirname, 'index.html'),
     })
   ],
+  devServer: {
+    proxy: {
+      '/**': 'http://localhost:3000/'
+    },
+  },
 };
