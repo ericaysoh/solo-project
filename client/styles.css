@@ -1,19 +1,39 @@
 body {
-  background-color: skyblue,
+  margin: 40px;
+  background-color: skyblue;
+  background-image: url(https://media.istockphoto.com/videos/colorful-laser-lights-on-party-professional-color-lighting-and-sound-video-id1291226836?s=640x640);
+  background-repeat: no-repeat;
+  background-size: 1500px 800px;
+}
+
+.tinyheader {
+  color: blue;
+}
+
+.title {
+  color: rgb(11, 9, 105);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
 }
 
 #banner {
-  display: flex,
-
+  display: flex;
+  color: rgb(244, 221, 248);
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 20px;
 }
 
-.button1 {
-  color: grey
-}
+/* #header {
+  color: gray;
+} */
 
-.button2 {
-  color: grey
-}
+/* #newUser {
+  color: violet;
+} */
 
 .button3 {
   color: grey
@@ -26,9 +46,10 @@ body {
 
 .leftside {
   border-style: solid;
-  border-width: 1px;
-  border-color: black;
+  border-width: 2px;
+  border-color: white;
   width: 80%;
+  height: 400px;
 }
 
 .rightside {
@@ -40,30 +61,35 @@ body {
 }
 
 #label {
-  color: black;
+  color: rgb(244, 221, 248);
   font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
 }
 
 #updropdown {
-  color: pink;
+  color: indigo;
   margin-bottom: 10%;
 }
-  
+
 #lodropdown {
-  color: red;
-  margin-bottom: 10%;
+    color: indigo;
+    margin-bottom: 10%;
 }
-  
+
 #fulldropdown {
-  color: gray;
-  margin-bottom: 10%;
+    color: indigo;
+    margin-bottom: 10%;
 }
 
 .progress {
   border-style: solid;
   border-width: 1px;
-  border-color: black;
-  width: 80%;
+  border-color: white;
+  width: 77.5%;
   height: 100px;
   margin-top: 20px;
+  border-width: 2px;
+  color: darkblue;
+  font-size: 15px;
+  font-family: "Lucida Console", "Courier New", monospace;
 }

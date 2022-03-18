@@ -2,7 +2,7 @@ const path = require ('path');
 const express = require ('express');
 const app = express();
 const PORT = 3000;
-
+const controller = require ('./controller')
 // const router = require(path.resolve('./server/controller.js')); //controller.js is where CRUD requests are
 
 // define route handlers
@@ -21,13 +21,13 @@ app.get('/', controller.getUserProgress, (req, res) => {
     )
   });
 
-app.post('/',     controller.getUserProgress, (req, res) => {
+app.post('/', controller.getUserProgress, (req, res) => {
   return (
-      console.log(req.body, 'woohooo'),
-      res
-      .set({ 'content-type': 'application/json' })
-      .status(200)
-      .send(res.locals.progress)
+    res
+    .set({ 'content-type': 'application/json' })
+    .status(200)
+    .json({ progress: res.locals.progress })
+    // console.log(req.body, 'woohooo', res.locals.progress)
       //   .json({ mastered: res.locals.mastered })
   )
 });

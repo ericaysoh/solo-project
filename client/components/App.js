@@ -1,45 +1,58 @@
 import React, { Component } from 'react';
 // import { Switch, Route } from 'react-router-dom';
-import Dropdown from './Dropdown'
+import Dropdown from './Dropdown';
+import Progress from './Progress'
 
 class App extends Component {
   constructor(props){
     super(props);
     // where state goes!! this.state = { // user's progress (dance moves mastered)}
     this.state = {
-      username: '',
-      userprogress : '',
+      user1: {}, 
+      user2: {}, 
+      user3: {}
     };
     // bind functions
-    
+    this.updateProgress = this.updateProgress.bind(this);
     // componentdidmount -> fetch request
   }
+
+  updateProgress(){
+    this.setState({
+      user1: {}, // would contain info from database
+      user2: {},
+      user3: {}
+    })
+  }
+
   render(){
     return (
         <div>
-          <h1>Dancing Squirrels!</h1>
+          <h1 className="title">Dance To Be Free</h1>
+
           <div id="banner">
-            <header>Welcome!</header>
+            <header id="header">Welcome!</header>
             <form className="loginInfo">
               <input type="text" className="formtext" placeholder="Username"></input>
             </form>
-            {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
             <form className="loginInfo">
               <input type="text" className="formtext" placeholder="Password"></input>
             </form>
-            <button className="button3" onClick={() => console.log("clocked!")}>Login</button>
-            <div>New squirrel?</div>
-            <button className="button3" onClick={() => console.log("clocked!")}>Sign Up</button>
+            <button className="button3" onClick={() => console.log("Welcome back!")}>Login</button>
+            <div id="newUser">New dancer?</div>
+            <button className="button3" onClick={() => console.log("Hi there!")}>Sign Up</button>
           </div>
+
           <div className="body">
-            <div className="leftside">
-          
-            </div>
-            <Dropdown />
-            </div>
-            <div className="progress">
-              hiiii
-            </div>
+            <div className="leftside"></div>
+            <Dropdown updateProgress={this.props.updateProgress} />
+          </div>
+            <Progress updateProgress={this.props.updateProgress}/>
+            {/* <div className="progress">
+              Dance moves mastered
+            </div> */}
+           
+           
             
             {/* <div className="rightside">
                 <label id="label">Upper Body Moves</label>
